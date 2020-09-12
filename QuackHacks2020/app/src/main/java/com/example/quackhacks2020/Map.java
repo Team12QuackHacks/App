@@ -22,6 +22,8 @@ import com.mapbox.android.core.location.LocationEnginePriority;
 import com.mapbox.android.core.location.LocationEngineProvider;
 import com.mapbox.android.core.permissions.PermissionsListener;
 import com.mapbox.android.core.permissions.PermissionsManager;
+import com.mapbox.mapboxsdk.annotations.Icon;
+import com.mapbox.mapboxsdk.annotations.IconFactory;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.annotations.BaseMarkerOptions;
@@ -75,19 +77,28 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
 
                     String key = snapshot.getKey();
                     System.out.println(key);
+                    IconFactory iconFactory = IconFactory.getInstance(Map.this);
+                    Icon icon;
+                    if(key.equals("Testing Centers")){
+                        icon = iconFactory.fromResource(R.drawable.testing);
+                    }
+                    else if(key.equals("Dining Halls")){
+                        icon = iconFactory.fromResource(R.drawable.dining);
+                    }
+                    else{
+                        icon = iconFactory.fromResource(R.drawable.popup);
+                    }
                     for (DataSnapshot snapshot2 : dataSnapshot.child(key).getChildren()) {
                         key = snapshot2.getKey();
-                        System.out.println("Long: " + Double.parseDouble(snapshot.child(key).child("long").getValue().toString()));
                         LatLng latLng = new LatLng( Double.parseDouble(snapshot.child(key).child("lat").getValue().toString() ),
                                 Double.parseDouble( snapshot.child(key).child("long").getValue().toString() ) );
-                        //LatLng latLng = new LatLng(12,25)
-                        //MarkerOptions l = new MarkerOptions().position(latLng);
-                        //map.addMarker(l);
+
                         String waitTime = snapshot.child(key).child("waittime").getValue().toString();
                         map.addMarker(new MarkerOptions()
                                 .position(latLng)
                                 .title(key)
-                                .setSnippet("Wait Time: " + waitTime));
+                                .setSnippet("Wait Time: " + waitTime)
+                                .setIcon(icon));
                     }
                 }
             }

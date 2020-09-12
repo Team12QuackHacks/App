@@ -111,7 +111,7 @@ MERGED from [com.jakewharton.timber:timber:4.6.0] C:\Users\k_pba\.gradle\caches\
 	android:supportsRtl
 		ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:13:9-33
 	android:roundIcon
 		ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
@@ -119,11 +119,7 @@ MERGED from [com.jakewharton.timber:timber:4.6.0] C:\Users\k_pba\.gradle\caches\
 	android:allowBackup
 		ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-<<<<<<< HEAD
-		ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:16:9-40
-=======
-		ADDED from C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:16:9-39
->>>>>>> 85c44c1af4f2b013ceb1c56ba9181737ea94c9fd
+		ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:16:9-39
 activity#com.example.quackhacks2020.MainActivity
 ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:17:9-23:20
 	android:name
