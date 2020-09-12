@@ -45,6 +45,20 @@ public class MainActivity extends AppCompatActivity {
                     layout.addView(t);
                     childrenWriter(snapshot, snapshot.getKey());
                 }
+
+                TextView text = new TextView(layout.getContext());
+                text.setText("Goto Map View");
+                layout.addView(text);
+                button = new Button(layout.getContext());
+                button.setText("Map");
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent map = new Intent(v.getContext(), Map.class);
+                        startActivity(map);
+                    }
+                });
+                layout.addView(button);
             }
 
             @Override
@@ -67,16 +81,6 @@ public class MainActivity extends AppCompatActivity {
                     });
                     layout.addView(b);
                 }
-                button = new Button(layout.getContext());
-                button.setText("Map");
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent map = new Intent(v.getContext(), Map.class);
-                        startActivity(map);
-                    }
-                });
-                layout.addView(button);
             }
         });
     }
