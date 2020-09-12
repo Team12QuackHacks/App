@@ -23,11 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private LinearLayout layout;
     private DatabaseReference database;
-    private ArrayList<String> children;
 
-    private LinearLayout layout;
-    private DatabaseReference database;
-    private ArrayList<String> children;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         layout.setOrientation(LinearLayout.VERTICAL);
         setContentView(layout);
         database = FirebaseDatabase.getInstance().getReference();
-        children = new ArrayList<>();
         databaseCatchup();
     }
 
@@ -45,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
-                    children.add(snapshot.getKey());
                     TextView t = new TextView(layout.getContext());
                     t.setText(snapshot.getKey());
                     layout.addView(t);
