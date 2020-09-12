@@ -1,0 +1,131 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.quackhacks2020"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+11-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:5:5-81
+11-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:5:22-78
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION_LOCATION" />
+12-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:6:5-88
+12-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:6:22-85
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:7:5-67
+13-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:7:22-64
+14
+15    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+16    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[com.google.firebase:firebase-database:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\951091bae5e7b9915689f9774098d192\jetified-firebase-database-19.4.0\AndroidManifest.xml:25:5-79
+17-->[com.google.firebase:firebase-database:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\951091bae5e7b9915689f9774098d192\jetified-firebase-database-19.4.0\AndroidManifest.xml:25:22-76
+18
+19    <application
+19-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:9:5-24:19
+20        android:allowBackup="true"
+20-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:10:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.3.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\c7c298e0dd1ea53a5a3551feb133ee7f\core-1.3.0\AndroidManifest.xml:24:18-86
+22        android:debuggable="true"
+23        android:icon="@mipmap/ic_launcher"
+23-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:11:9-43
+24        android:label="@string/app_name"
+24-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:12:9-41
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:13:9-54
+26        android:supportsRtl="true"
+26-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:14:9-35
+27        android:testOnly="true"
+28        android:theme="@style/AppTheme" >
+28-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:15:9-40
+29        <activity android:name="com.example.quackhacks2020.MainActivity" >
+29-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:16:9-22:20
+29-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:16:19-47
+30            <intent-filter>
+30-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:17:13-21:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:18:17-69
+31-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:18:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:20:17-77
+33-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:20:27-74
+34            </intent-filter>
+35        </activity>
+36        <activity android:name="com.example.quackhacks2020.SpecificLocationActivity" />
+36-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:23:9-62
+36-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:23:19-59
+37        <activity
+37-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:24:9-31:50
+38            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+38-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:25:13-85
+39            android:excludeFromRecents="true"
+39-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:26:13-46
+40            android:exported="true"
+40-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:27:13-36
+41            android:launchMode="singleTask"
+41-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:28:13-44
+42            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+42-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:29:13-102
+43            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+43-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:30:13-72
+44
+45        <service
+45-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:33:9-39:19
+46            android:name="com.google.firebase.components.ComponentDiscoveryService"
+46-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:34:13-84
+47            android:directBootAware="true"
+47-->[com.google.firebase:firebase-common:19.3.1] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\d27002a8865358303524f51fcd8bbb75\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+48            android:exported="false" >
+48-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:35:13-37
+49            <meta-data
+49-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:36:13-38:85
+50                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+50-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:37:17-109
+51                android:value="com.google.firebase.components.ComponentRegistrar" />
+51-->[com.google.firebase:firebase-auth:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f67724920226e82745f5f0176a6162e9\jetified-firebase-auth-19.4.0\AndroidManifest.xml:38:17-82
+52            <meta-data
+52-->[com.google.firebase:firebase-database:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\951091bae5e7b9915689f9774098d192\jetified-firebase-database-19.4.0\AndroidManifest.xml:32:13-34:85
+53                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+53-->[com.google.firebase:firebase-database:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\951091bae5e7b9915689f9774098d192\jetified-firebase-database-19.4.0\AndroidManifest.xml:33:17-109
+54                android:value="com.google.firebase.components.ComponentRegistrar" />
+54-->[com.google.firebase:firebase-database:19.4.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\951091bae5e7b9915689f9774098d192\jetified-firebase-database-19.4.0\AndroidManifest.xml:34:17-82
+55        </service>
+56
+57        <activity
+57-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\8d306c96d5671c46c09e41df093ec68f\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+58            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+58-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\8d306c96d5671c46c09e41df093ec68f\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+59            android:exported="false"
+59-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\8d306c96d5671c46c09e41df093ec68f\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+60            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+60-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\8d306c96d5671c46c09e41df093ec68f\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+61
+62        <provider
+62-->[com.google.firebase:firebase-common:19.3.1] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\d27002a8865358303524f51fcd8bbb75\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
+63            android:name="com.google.firebase.provider.FirebaseInitProvider"
+63-->[com.google.firebase:firebase-common:19.3.1] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\d27002a8865358303524f51fcd8bbb75\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
+64            android:authorities="com.example.quackhacks2020.firebaseinitprovider"
+64-->[com.google.firebase:firebase-common:19.3.1] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\d27002a8865358303524f51fcd8bbb75\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
+65            android:directBootAware="true"
+65-->[com.google.firebase:firebase-common:19.3.1] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\d27002a8865358303524f51fcd8bbb75\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+66            android:exported="false"
+66-->[com.google.firebase:firebase-common:19.3.1] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\d27002a8865358303524f51fcd8bbb75\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
+67            android:initOrder="100" />
+67-->[com.google.firebase:firebase-common:19.3.1] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\d27002a8865358303524f51fcd8bbb75\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
+68
+69        <meta-data
+69-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f2c8b4624d1269ee053bd8db8444a9c2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+70            android:name="com.google.android.gms.version"
+70-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f2c8b4624d1269ee053bd8db8444a9c2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+71            android:value="@integer/google_play_services_version" />
+71-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\IsaacD\.gradle\caches\transforms-2\files-2.1\f2c8b4624d1269ee053bd8db8444a9c2\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+72    </application>
+73
+74</manifest>
