@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\IsaacD\\AndroidStudioProjects\\App\\QuackHacks2020\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\k_pba\\StudioProjects\\App\\QuackHacks2020\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\IsaacD\\.gradle\\caches\\transforms-2\\files-2.1\\c7c298e0dd1ea53a5a3551feb133ee7f\\core-1.3.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\k_pba\\.gradle\\caches\\transforms-2\\files-2.1\\c7c298e0dd1ea53a5a3551feb133ee7f\\core-1.3.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\IsaacD\\.gradle\\caches\\transforms-2\\files-2.1\\e33b28a1604fa6b21484a78757ef1f1f\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\k_pba\\.gradle\\caches\\transforms-2\\files-2.1\\e33b28a1604fa6b21484a78757ef1f1f\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
