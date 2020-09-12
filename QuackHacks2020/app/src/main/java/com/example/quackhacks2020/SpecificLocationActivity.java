@@ -33,20 +33,14 @@ public class SpecificLocationActivity extends AppCompatActivity {
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
         String message = intent.getStringExtra(Intent.EXTRA_TEXT);
-        locations = message.split(" ");
+
+        //parses message with a regular expression and creates an array of size 2 with the type of location and its name
+        locations = message.split(";");
         // sets title to the proper location of the building
         TextView location = findViewById(R.id.location);
-        broadTerm = locations[0]+ " " + locations[1];
+        broadTerm = locations[0];
 
-        specificLocation = "";
-        for (int i = 2; i < locations.length; i++) {
-            if (i != locations.length - 1) {
-                specificLocation += locations[i] + " ";
-            } else {
-                specificLocation += locations[i];
-            }
-        }
-
+        specificLocation = locations[1];
         location.setText(specificLocation);
         //creates instance of firebase database
         database = FirebaseDatabase.getInstance().getReference();

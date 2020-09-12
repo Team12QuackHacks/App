@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View view) {
                             Intent intent = new Intent(layout.getContext(), SpecificLocationActivity.class);
-                            String message = parent + " " + snSh.getKey();
+                            String message = parent + ";" + snSh.getKey();
                             intent.putExtra(EXTRA_TEXT, message);
                             startActivity(intent);
                         }
