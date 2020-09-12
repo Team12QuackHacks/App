@@ -59,8 +59,8 @@
 33        android:supportsRtl="true"
 33-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:15:9-35
 34        android:testOnly="true"
-35        android:theme="@style/AppTheme" >
-35-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:16:9-40
+35        android:theme="@style/GTtheme" >
+35-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:16:9-39
 36        <activity android:name="com.example.quackhacks2020.MainActivity" >
 36-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:17:9-23:20
 36-->C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:17:19-47

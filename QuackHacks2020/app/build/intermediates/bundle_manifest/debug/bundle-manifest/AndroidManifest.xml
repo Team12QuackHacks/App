@@ -32,7 +32,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/GTtheme" >
         <activity android:name="com.example.quackhacks2020.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

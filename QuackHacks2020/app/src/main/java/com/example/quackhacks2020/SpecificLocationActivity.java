@@ -50,11 +50,11 @@ public class SpecificLocationActivity extends AppCompatActivity {
 
 
         curWait = findViewById(R.id.curWaitTime);
-        DatabaseReference locationData = database.child(broadTerm).child(specificLocation);
+        DatabaseReference locationData = database.child(broadTerm).child(specificLocation).child("waittime");
         locationData.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                curWait.setText(dataSnapshot.getValue().toString());
+                curWait.setText(dataSnapshot.getValue().toString() + " minutes");
             }
 
             @Override
