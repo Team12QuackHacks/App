@@ -795,6 +795,7 @@ id chronometer
 id collapseActionView
 id content
 id contentPanel
+id curWaitTime
 id custom
 id customPanel
 id dark
@@ -870,6 +871,7 @@ id showCustom
 id showHome
 id showTitle
 id spacer
+id spinner
 id split_action_bar
 id spread
 id spread_inside
