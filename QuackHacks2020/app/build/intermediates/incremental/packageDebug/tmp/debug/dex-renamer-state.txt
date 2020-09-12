@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Sat Sep 12 15:13:00 EDT 2020
 base.0=C\:\\Users\\k_pba\\StudioProjects\\App\\QuackHacks2020\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+=======
+#Sat Sep 12 15:18:17 EDT 2020
+base.0=C\:\\Users\\IsaacD\\AndroidStudioProjects\\App\\QuackHacks2020\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+>>>>>>> 85c44c1af4f2b013ceb1c56ba9181737ea94c9fd
 path.0=classes.dex
 renamed.0=classes.dex

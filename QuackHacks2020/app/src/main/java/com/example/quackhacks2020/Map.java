@@ -119,7 +119,6 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         } else{
             locationEngine.addLocationEngineListener(this);
         }
-
     }
     @SuppressWarnings("MissingPermission")
     private void initilizeLocationLayer(){

@@ -119,7 +119,11 @@ MERGED from [com.jakewharton.timber:timber:4.6.0] C:\Users\k_pba\.gradle\caches\
 	android:allowBackup
 		ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
+<<<<<<< HEAD
 		ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:16:9-40
+=======
+		ADDED from C:\Users\IsaacD\AndroidStudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:16:9-39
+>>>>>>> 85c44c1af4f2b013ceb1c56ba9181737ea94c9fd
 activity#com.example.quackhacks2020.MainActivity
 ADDED from C:\Users\k_pba\StudioProjects\App\QuackHacks2020\app\src\main\AndroidManifest.xml:17:9-23:20
 	android:name

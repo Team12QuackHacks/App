@@ -24,7 +24,7 @@ public class SpecificLocationActivity extends AppCompatActivity {
 
     private Spinner dropdown;
     private String[] locations;
-    private DatabaseReference database;
+    private DatabaseReference database, locationData;
     private int curWaitTime;
     private TextView curWait;
     private String broadTerm, specificLocation;
@@ -50,11 +50,11 @@ public class SpecificLocationActivity extends AppCompatActivity {
 
 
         curWait = findViewById(R.id.curWaitTime);
-        DatabaseReference locationData = database.child(broadTerm).child(specificLocation);
+        locationData = database.child(broadTerm).child(specificLocation).child("waittime");
         locationData.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                curWait.setText(dataSnapshot.getValue().toString());
+                curWait.setText(dataSnapshot.getValue().toString() + " minutes");
             }
 
             @Override
@@ -78,7 +78,16 @@ public class SpecificLocationActivity extends AppCompatActivity {
         Scanner sc = new Scanner(dropdown.getSelectedItem().toString());
         int wait = sc.nextInt();
         database.child(broadTerm).child(specificLocation).child("waittime").setValue(wait);
-        Toast toast = Toast.makeText(this, "Check In successful", Toast.LENGTH_LONG);
-        toast.show();
+        locationData.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                curWait.setText(dataSnapshot.getValue().toString() + " minutes");
+            }
+
+            @Override
+            public void onCancelled(DatabaseError firebaseError) {
+
+            }
+        });
     }
 }
