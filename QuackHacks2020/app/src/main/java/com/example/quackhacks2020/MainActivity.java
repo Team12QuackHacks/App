@@ -25,9 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference database;
     private ArrayList<String> children;
 
-    private LinearLayout layout;
-    private DatabaseReference database;
-    private ArrayList<String> children;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
