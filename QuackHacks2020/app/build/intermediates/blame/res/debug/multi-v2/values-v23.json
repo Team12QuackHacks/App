@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\IsaacD\\AndroidStudioProjects\\App\\QuackHacks2020\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\k_pba\\StudioProjects\\App\\QuackHacks2020\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\IsaacD\\.gradle\\caches\\transforms-2\\files-2.1\\e33b28a1604fa6b21484a78757ef1f1f\\appcompat-1.2.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\k_pba\\.gradle\\caches\\transforms-2\\files-2.1\\e33b28a1604fa6b21484a78757ef1f1f\\appcompat-1.2.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

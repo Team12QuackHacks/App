@@ -1,11 +1,21 @@
 package com.example.quackhacks2020;
 
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.mapbox.android.core.location.LocationEngine;
 import com.mapbox.android.core.location.LocationEngineListener;
 import com.mapbox.android.core.location.LocationEnginePriority;
@@ -14,6 +24,8 @@ import com.mapbox.android.core.permissions.PermissionsListener;
 import com.mapbox.android.core.permissions.PermissionsManager;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
 import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.annotations.BaseMarkerOptions;
+import com.mapbox.mapboxsdk.annotations.Marker;
 import com.mapbox.mapboxsdk.camera.CameraUpdateFactory;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapView;
@@ -25,6 +37,8 @@ import com.mapbox.mapboxsdk.plugins.locationlayer.modes.RenderMode;
 
 import java.util.List;
 
+import static android.content.Intent.EXTRA_TEXT;
+
 
 public class Map extends AppCompatActivity implements OnMapReadyCallback, LocationEngineListener, PermissionsListener {
     private MapView mapView;
@@ -33,6 +47,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
     private LocationEngine locationEngine;
     private LocationLayerPlugin locationLayerPlugin;
     private Location originLocation;
+    private DatabaseReference database;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,13 +58,44 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         mapView.getMapAsync(this);
 
     }
+
+
+
     @Override
     public void onMapReady(MapboxMap mapboxMap) {
         map = mapboxMap;
         enableLocation();
 
-        LatLng latLng = new LatLng(33.7756, -84.3963);
-        map.addMarker(new MarkerOptions().position(latLng));
+        Query secRef=FirebaseDatabase.getInstance().getReference();
+        secRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+
+                    String key = snapshot.getKey();
+                    System.out.println(key);
+                    for (DataSnapshot snapshot2 : dataSnapshot.child(key).getChildren()) {
+                        key = snapshot2.getKey();
+                        System.out.println("Long: " + Double.parseDouble(snapshot.child(key).child("long").getValue().toString()));
+                        LatLng latLng = new LatLng( Double.parseDouble(snapshot.child(key).child("lat").getValue().toString() ),
+                                Double.parseDouble( snapshot.child(key).child("long").getValue().toString() ) );
+                        //LatLng latLng = new LatLng(12,25)
+                        //MarkerOptions l = new MarkerOptions().position(latLng);
+                        //map.addMarker(l);
+                        String waitTime = snapshot.child(key).child("waittime").getValue().toString();
+                        map.addMarker(new MarkerOptions()
+                                .position(latLng)
+                                .title(key)
+                                .setSnippet("Wait Time: " + waitTime));
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void enableLocation() {
