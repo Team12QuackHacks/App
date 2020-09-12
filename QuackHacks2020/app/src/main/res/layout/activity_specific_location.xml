@@ -41,8 +41,10 @@
         android:id="@+id/spinner"
         android:layout_width="150dp"
         android:layout_height="39dp"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="194dp" />
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="194dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/curWaitTime"
