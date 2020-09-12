@@ -10,9 +10,9 @@
         android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="40dp"
-        android:text="TextView"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="36dp"
+        android:text="Location"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,7 +20,7 @@
         android:id="@+id/waitTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="76dp"
         android:text="Wait Time: "
         app:layout_constraintStart_toStartOf="parent"
@@ -39,11 +39,11 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:background="#FFFFFF"
         android:layout_width="188dp"
         android:layout_height="40dp"
         android:layout_marginStart="108dp"
         android:layout_marginTop="196dp"
+        android:background="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,19 +51,20 @@
         android:id="@+id/curWaitTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
+        android:layout_marginStart="204dp"
         android:layout_marginTop="76dp"
-        android:text="TextView"
+        android:text="0 minutes"
+        android:
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="189dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="152dp"
-        android:text="Select Wait Time"
+        android:layout_width="215dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="148dp"
+        android:text="Set Current Wait Time"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
