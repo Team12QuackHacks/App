@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private Button button;
     private LinearLayout layout;
     private DatabaseReference database;
-    private ArrayList<String> children;
 
 
     @Override
@@ -33,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         layout.setOrientation(LinearLayout.VERTICAL);
         setContentView(layout);
         database = FirebaseDatabase.getInstance().getReference();
-        children = new ArrayList<>();
         databaseCatchup();
     }
 
@@ -42,12 +40,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
-                    children.add(snapshot.getKey());
                     TextView t = new TextView(layout.getContext());
                     t.setText(snapshot.getKey());
                     layout.addView(t);
                     childrenWriter(snapshot, snapshot.getKey());
                 }
+
+                TextView text = new TextView(layout.getContext());
+                text.setText("Goto Map View");
+                layout.addView(text);
+                button = new Button(layout.getContext());
+                button.setText("Map");
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent map = new Intent(v.getContext(), Map.class);
+                        startActivity(map);
+                    }
+                });
+                layout.addView(button);
             }
 
             @Override
@@ -70,16 +81,6 @@ public class MainActivity extends AppCompatActivity {
                     });
                     layout.addView(b);
                 }
-                button = new Button(layout.getContext());
-                button.setText("Map");
-                button.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent map = new Intent(v.getContext(), Map.class);
-                        startActivity(map);
-                    }
-                });
-                layout.addView(button);
             }
         });
     }

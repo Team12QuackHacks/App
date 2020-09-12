@@ -77,7 +77,7 @@ public class SpecificLocationActivity extends AppCompatActivity {
     public void onClick(View v) {
         Scanner sc = new Scanner(dropdown.getSelectedItem().toString());
         int wait = sc.nextInt();
-        database.child(broadTerm).child(specificLocation).setValue(wait);
+        database.child(broadTerm).child(specificLocation).child("waittime").setValue(wait);
         Toast toast = Toast.makeText(this, "Check In successful", Toast.LENGTH_LONG);
         toast.show();
     }
