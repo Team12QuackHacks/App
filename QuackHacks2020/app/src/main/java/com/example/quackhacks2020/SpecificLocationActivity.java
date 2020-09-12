@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseError;
 import com.google.firebase.database.ChildEventListener;
@@ -74,5 +75,7 @@ public class SpecificLocationActivity extends AppCompatActivity {
     public void onClick(View v) {
         int wait = Integer.parseInt(dropdown.getSelectedItem().toString());
         database.child(broadTerm).child(specificLocation).setValue(wait);
+        Toast toast = Toast.makeText(this, "Check In successful", Toast.LENGTH_LONG);
+        toast.show();
     }
 }
