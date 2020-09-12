@@ -38,7 +38,6 @@ public class SpecificLocationActivity extends AppCompatActivity {
         TextView location = findViewById(R.id.location);
         broadTerm = locations[0]+ " " + locations[1];
 
-
         specificLocation = "";
         for (int i = 2; i < locations.length; i++) {
             if (i != locations.length - 1) {
