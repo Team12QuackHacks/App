@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "90651948956",
+    "firebase_url": "https://zippy-haven-289301.firebaseio.com",
+    "project_id": "zippy-haven-289301",
+    "storage_bucket": "zippy-haven-289301.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90651948956:android:fc623787e387c74db63a59",
+        "android_client_info": {
+          "package_name": "com.example.quackhacks2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90651948956-ip62g1d3qro0avhs2g9obb8mmv29bmam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWhXKcUo_q4NwXsfGMc9NEEzVIqMoWySI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90651948956-ip62g1d3qro0avhs2g9obb8mmv29bmam.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
