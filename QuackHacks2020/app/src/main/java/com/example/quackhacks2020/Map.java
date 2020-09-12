@@ -40,8 +40,6 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         setContentView(R.layout.map);
         mapView = (MapView) findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
-<<<<<<< HEAD
-=======
         mapView.getMapAsync(this);
 
     }
@@ -75,8 +73,6 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback, Locati
         } else{
             locationEngine.addLocationEngineListener(this);
         }
-
->>>>>>> 30128976d863372f56a1b73420caf51e1b42450c
     }
     @SuppressWarnings("MissingPermission")
     private void initilizeLocationLayer(){
