@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference database;
     private ArrayList<String> children;
 
+    private LinearLayout layout;
+    private DatabaseReference database;
+    private ArrayList<String> children;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance().getReference();
         children = new ArrayList<>();
         databaseCatchup();
-
     }
 
     private void databaseCatchup() {

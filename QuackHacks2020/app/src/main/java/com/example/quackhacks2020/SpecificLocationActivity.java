@@ -18,6 +18,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Scanner;
+
 public class SpecificLocationActivity extends AppCompatActivity {
 
     private Spinner dropdown;
@@ -64,7 +66,7 @@ public class SpecificLocationActivity extends AppCompatActivity {
         //get the spinner from the xml.
         dropdown = findViewById(R.id.spinner);
         //create a list of items for the spinner.
-        String[] items = new String[]{"0", "10", "20", "30"};
+        String[] items = new String[]{"0 minutes", "5 minutes", "20 minutes", "30 minutes or more"};
         //create an adapter to describe how the items are displayed, adapters are used in several places in android.
         //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
@@ -73,7 +75,8 @@ public class SpecificLocationActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        int wait = Integer.parseInt(dropdown.getSelectedItem().toString());
+        Scanner sc = new Scanner(dropdown.getSelectedItem().toString());
+        int wait = sc.nextInt();
         database.child(broadTerm).child(specificLocation).setValue(wait);
         Toast toast = Toast.makeText(this, "Check In successful", Toast.LENGTH_LONG);
         toast.show();
